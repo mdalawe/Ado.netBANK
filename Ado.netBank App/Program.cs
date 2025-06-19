@@ -6,7 +6,7 @@ namespace BankApp
     {
         static void Main(string[] args)
         {
-            string connStr = "Server=localhost;Database=WorkerDB2;Integrated Security=True;TrustServerCertificate=True;";
+            string connStr = "Server=localhost;Database=BankInfoDB;Integrated Security=True;TrustServerCertificate=True;";
             BankDatabase bankDb = new BankDatabase(connStr);
 
             try

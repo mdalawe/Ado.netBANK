@@ -62,3 +62,4 @@ C:\Users\user\source\repos\Ado.netBank App\Ado.netBank App\obj\Debug\net8.0\refi
 C:\Users\user\source\repos\Ado.netBank App\Ado.netBank App\obj\Debug\net8.0\Ado.netBank App.pdb
 C:\Users\user\source\repos\Ado.netBank App\Ado.netBank App\obj\Debug\net8.0\Ado.netBank App.genruntimeconfig.cache
 C:\Users\user\source\repos\Ado.netBank App\Ado.netBank App\obj\Debug\net8.0\ref\Ado.netBank App.dll
+C:\Users\user\source\repos\Ado.netBank App\Ado.netBank App\obj\Debug\net8.0\Ado.netBank App.sourcelink.json

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ado.netBank App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9479a5244e47d174ea21f7ada409eaf98f9e08b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ado.netBank App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ado.netBank App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

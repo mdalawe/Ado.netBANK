@@ -24,7 +24,6 @@ namespace BankApp
                 Console.WriteLine("You must be at least 18 to open an account.");
                 return;
             }
-
             Console.Write("Enter your gender: ");
             string gender = Console.ReadLine();
 
@@ -36,7 +35,11 @@ namespace BankApp
                 return;
             }
 
-            Console.Write("Set a 4-digit PIN: ");
+            string accountNumber = phone.Substring(1);
+
+            Console.WriteLine("This is your account number: " + accountNumber);
+
+            Console.Write("\nSet a 4-digit PIN: ");
             string pin = Console.ReadLine();
             if (pin.Length != 4)
             {
@@ -50,8 +53,8 @@ namespace BankApp
             {
                 connection.Open();
 
-                string query = "INSERT INTO BankUsers (Id, Name, Age, Gender, Phone, PIN, Balance) " +
-                               "VALUES (NEWID(), @Name, @Age, @Gender, @Phone, @PIN, @Balance)";
+                string query = "INSERT INTO BankUsers (Id, Name, Age, Gender, Phone, PIN, Balance, AccountNumber) " +
+                               "VALUES (NEWID(), @Name, @Age, @Gender, @Phone, @PIN, @Balance, @AccountNumber)";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Name", name);
@@ -60,8 +63,10 @@ namespace BankApp
                 command.Parameters.AddWithValue("@Phone", phone);
                 command.Parameters.AddWithValue("@PIN", pin);
                 command.Parameters.AddWithValue("@Balance", balance);
+                command.Parameters.AddWithValue("@AccountNumber", accountNumber);
 
                 command.ExecuteNonQuery();
+
                 Console.WriteLine("Account created successfully.");
             }
         }
@@ -69,10 +74,10 @@ namespace BankApp
         public void LoginAndShowBalance()
         {
             Console.Write("Enter your phone number: ");
-            string phone = Console.ReadLine();
+            string phone = Console.ReadLine()!;
 
             Console.Write("Enter your PIN: ");
-            string pin = Console.ReadLine();
+            string pin = Console.ReadLine()!;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -103,7 +108,7 @@ namespace BankApp
         public void Withdraw()
         {
             Console.Write("Enter your phone number: ");
-            string phone = Console.ReadLine();
+            string phone = Console.ReadLine()!;
 
             Console.Write("Enter your PIN: ");
             string pin = Console.ReadLine();
